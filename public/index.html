@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+   <link rel="stylesheet" href="index.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+</head>
+<body>
+
+    <header>
+        <nav class="navBar">
+          <div class="nav-item" onclick="showuser('expenceForm')">Expenses Tracker</div>
+          <button id="logout" class="lgbtn" style="background: red;">LogOut</button>
+        </nav>
+      </header>
+    </div>
+    <div class="container">
+        <div class="item item1">
+            <form onsubmit="addexpance(event)" class="form-container">
+                <label for="expanceAmount">Choose Expance Amopunt</label>
+                <input class="form-item" type="number" id="expanceAmount">
+                <label  for="Description"> Expance Description</label>
+                <input class="form-item" type="text" id="Description">
+                <label for="catagory">Choose The catagery </label>
+                <select class="form-item" name="catagery" id="catagory">
+                    <option value="Food">Food</option>
+                    <option value="Petrol">Petrol</option>
+                    <option value="rent">Rent </option>
+                    <option value="shoping">Shoping</option>
+                </select>
+                <button class="btn" type="submit">Add Expance</button>
+                </form>
+        </div>
+        <div class="item item2">
+            <div id="premium">
+                <button id="rozerpay">
+                    Buy premium
+                </button>     
+            </div> 
+            <div>
+                <p class="center" id="ledtit"></p>
+                <ul id="leader"></ul>
+            </div>
+        </div>
+    </div>
+   
+    
+   
+    <button onclick="download()" id="downloadexpense">Download File</button>
+    <button onclick="downloadAll()" id="downloadAllExpnse">Show all Download</button>
+    <div id="setrow">
+        No Of Rows Per Page : 
+        <select name="perPage" id="setrowExpance">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+        </select>
+    </div>
+    <div>
+    <h2>Expances</h2>
+    <table id="addTable" class="Exptable">
+<tr>
+    <th>Expance Amount</th>
+    <th>Description</th>
+    <th>catagery</th>
+</tr>
+    </table>
+</div>
+<div class="center">
+    <span id="pagination"></span>
+</div>
+
+<div>
+    <ol id="listof-file">
+    </ol>
+</div>
+    
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/index.js"></script>
+</body>
+</html>
